@@ -1,5 +1,5 @@
 {
-  "name": "ginpacchi",
+  "name": "ginpacchi-1",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@types/node": "20.5.3",
+    "@types/node": "20.5.4",
     "@types/react": "18.2.21",
     "@types/react-dom": "18.2.7",
     "eslint": "8.47.0",
