@@ -13,7 +13,6 @@ const DateAndTextStyle = styled.div`
     h1{
         margin: 10px auto;
         width: 340px;
-        border-bottom: 1px solid #7b7b7b;
         font-size: 68px;
     }
     p{
