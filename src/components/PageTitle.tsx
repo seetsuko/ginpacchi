@@ -7,9 +7,10 @@ type Props = {
 const PageTitleStyle = styled.div`
     text-align: center;
     border-bottom: 1px solid #979797;
+    margin: 50px 0;
     p{
         font-size: 30px;
-        margin: 50px 0 0 0;
+        margin: 0;
     }
 `
 
