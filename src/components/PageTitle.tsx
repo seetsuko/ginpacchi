@@ -6,13 +6,17 @@ type Props = {
 
 const PageTitleStyle = styled.div`
     text-align: center;
-    font-size: 25px;
+    border-bottom: 1px solid #979797;
+    p{
+        font-size: 30px;
+        margin: 50px 0 0 0;
+    }
 `
 
 export const PageTitle = ({pageTitle}:Props) => {
     return (
         <PageTitleStyle>
-            <h3>{pageTitle}</h3>
+            <p>{pageTitle}</p>
         </PageTitleStyle>
     );
 }
