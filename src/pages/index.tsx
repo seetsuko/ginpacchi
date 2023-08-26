@@ -1,6 +1,7 @@
 import dayjs from 'dayjs'
 import Head from 'next/head'
 import { DateAndMainText } from '../components/DateAndMainText'
+import { MembersAndSearch } from '@/components/MembersAndSearch'
 
 export default function Home() {
 
@@ -17,6 +18,7 @@ export default function Home() {
       </Head>
       <main>
           <DateAndMainText date={today} mainText={`￥　${costTotal}`}/>
+          <MembersAndSearch />
       </main>
     </>
   )
