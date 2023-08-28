@@ -1,6 +1,9 @@
+'use client'
+
 import type { AppProps } from 'next/app'
-import { Header } from '../components/Header'
 import { createGlobalStyle } from 'styled-components'
+import { Header } from '../components/Header'
+import { Menubar } from '@/components/Menubar'
 
 const GlobalStyle = createGlobalStyle`
 html,
@@ -37,7 +40,8 @@ a {
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
-      <GlobalStyle/>
+      <GlobalStyle />
+      <Menubar />
       <Header />
       <Component {...pageProps} />
     </>
