@@ -28,7 +28,7 @@ export const DateAndMainText = ({date, mainText}: Props) => {
     return (
         <DateAndTextStyle>
             <div>
-            <p>{date.toString()}</p>
+            <p suppressHydrationWarning={true}>{date.toString()}</p>
             </div>
             <div>
             <h1>{mainText}</h1>
