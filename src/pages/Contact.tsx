@@ -1,13 +1,13 @@
-"use client"
+'use client'
 
-import { PageTitle } from "@/components/PageTitle";
+import { PageTitle } from '@/components/PageTitle'
 
 const Contact = () => {
-    return (
-        <div>
-            <PageTitle pageTitle="お問い合わせ" />
-        </div>
-    );
+  return (
+    <div>
+      <PageTitle pageTitle='お問い合わせ' />
+    </div>
+  )
 }
 
-export default Contact;
+export default Contact

@@ -1,13 +1,13 @@
-"use client"
+'use client'
 
-import { PageTitle } from "@/components/PageTitle";
+import { PageTitle } from '@/components/PageTitle'
 
 const StaffEdit = () => {
-    return (
-        <div>
-            <PageTitle pageTitle="スタッフ情報編集"/>
-        </div>
-    );
+  return (
+    <div>
+      <PageTitle pageTitle='スタッフ情報編集' />
+    </div>
+  )
 }
 
-export default StaffEdit;
+export default StaffEdit

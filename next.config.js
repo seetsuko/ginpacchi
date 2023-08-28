@@ -5,7 +5,7 @@ const nextConfig = {
     appDir: true,
   },
   compiler: {
-      styledComponents: true,
+    styledComponents: true,
   },
 }
 

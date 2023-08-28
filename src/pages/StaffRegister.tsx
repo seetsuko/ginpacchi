@@ -1,13 +1,13 @@
-"use client"
+'use client'
 
-import { PageTitle } from "@/components/PageTitle";
+import { PageTitle } from '@/components/PageTitle'
 
 const StaffRegister = () => {
-    return (
-        <div>
-            <PageTitle pageTitle="スタッフ新規登録" />
-        </div>
-    );
+  return (
+    <div>
+      <PageTitle pageTitle='スタッフ新規登録' />
+    </div>
+  )
 }
 
-export default StaffRegister;
+export default StaffRegister

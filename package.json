@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint --dir src",
+    "lint:fix": "yarn lint --fix",
+    "format": "prettier --write --ignore-path .gitignore './**/*.{js,jsx,ts,tsx,json}'"
   },
   "dependencies": {
     "@types/node": "20.5.3",
@@ -26,6 +28,8 @@
   },
   "devDependencies": {
     "@types/styled-components": "^5.1.26",
-    "babel-plugin-styled-components": "^2.1.4"
+    "babel-plugin-styled-components": "^2.1.4",
+    "eslint-config-prettier": "^9.0.0",
+    "prettier": "^3.0.2"
   }
 }
