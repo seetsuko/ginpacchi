@@ -1,3 +1,5 @@
+"use client"
+
 import dayjs from 'dayjs'
 import Head from 'next/head'
 import { DateAndMainText } from '../components/DateAndMainText'

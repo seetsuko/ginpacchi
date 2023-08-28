@@ -1,3 +1,5 @@
+"use client"
+
 import { Dayjs } from "dayjs";
 import { styled } from "styled-components";
 

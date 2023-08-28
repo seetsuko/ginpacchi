@@ -1,3 +1,5 @@
+"use client"
+
 import { PageTitle } from "@/components/PageTitle";
 
 const StaffEdit = () => {

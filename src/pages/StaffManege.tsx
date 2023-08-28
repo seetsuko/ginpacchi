@@ -1,3 +1,4 @@
+"use client"
 
 import { MembersAndSearch } from "@/components/MembersAndSearch";
 import { PageTitle } from "@/components/PageTitle";

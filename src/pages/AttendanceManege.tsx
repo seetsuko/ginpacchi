@@ -1,4 +1,4 @@
-// 勤怠管理画面
+"use client"
 
 const AttendanceManegeStyle = styled.div`
     
