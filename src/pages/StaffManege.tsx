@@ -5,15 +5,6 @@ import styled from 'styled-components'
 import { MembersAndSearch } from '@/components/MembersAndSearch'
 import { PageTitle } from '@/components/PageTitle'
 
-const StaffAddLinkStyle = styled.div`
-  text-align: center;
-  margin: 60px auto;
-  font-size: 33px;
-  color: #0059f3;
-  border-bottom: 1px solid #0059f3;
-  width: 250px;
-`
-
 const StaffManege = () => {
   return (
     <div>
@@ -27,3 +18,12 @@ const StaffManege = () => {
 }
 
 export default StaffManege
+
+const StaffAddLinkStyle = styled.div`
+  text-align: center;
+  margin: 60px auto;
+  font-size: 33px;
+  color: #0059f3;
+  border-bottom: 1px solid #0059f3;
+  width: 250px;
+`

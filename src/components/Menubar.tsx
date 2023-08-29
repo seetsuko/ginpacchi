@@ -3,6 +3,26 @@
 import Link from 'next/link'
 import { slide as Menu } from 'react-burger-menu'
 
+export const Menubar = () => {
+
+  return (
+    <Menu styles={menuStyle}>
+      <Link href='/' className='menu-item'>
+        トップ
+      </Link>
+      <Link href='/StaffManege' className='menu-item'>
+        スタッフ管理
+      </Link>
+      <Link href='/' className='menu-item'>
+        過去の人件費
+      </Link>
+      <Link href='/Contact' className='menu-item'>
+        お問い合わせ
+      </Link>
+    </Menu>
+  )
+}
+
 const menuStyle = {
   bmBurgerButton: {
     position: 'fixed',
@@ -49,23 +69,4 @@ const menuStyle = {
   bmOverlay: {
     background: 'rgba(0, 0, 0, 0.3)',
   },
-}
-
-export const Menubar = () => {
-  return (
-    <Menu styles={menuStyle}>
-      <Link href='/' className='menu-item'>
-        トップ
-      </Link>
-      <Link href='/StaffManege' className='menu-item'>
-        スタッフ管理
-      </Link>
-      <Link href='/' className='menu-item'>
-        過去の人件費
-      </Link>
-      <Link href='/Contact' className='menu-item'>
-        お問い合わせ
-      </Link>
-    </Menu>
-  )
 }

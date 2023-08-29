@@ -2,6 +2,25 @@
 
 import styled from 'styled-components'
 
+export const MembersAndSearch = () => {
+  return (
+    <>
+      <SearchStyle>
+        <input type='text' placeholder='Search' />
+        <button>さがす</button>
+      </SearchStyle>
+      <MembersListStyle>
+        <ul>
+          <li>ながと　ひのと</li>
+          <li>さくら　ももこ</li>
+          <li>松坂　桃李</li>
+          <li>松坂　桃李</li>
+        </ul>
+      </MembersListStyle>
+    </>
+  )
+}
+
 const SearchStyle = styled.div`
   text-align: center;
   margin-top: 50px;
@@ -44,22 +63,3 @@ const MembersListStyle = styled.div`
     margin: 20px 20px;
   }
 `
-
-export const MembersAndSearch = () => {
-  return (
-    <>
-      <SearchStyle>
-        <input type='text' placeholder='Search' />
-        <button>さがす</button>
-      </SearchStyle>
-      <MembersListStyle>
-        <ul>
-          <li>ながと　ひのと</li>
-          <li>さくら　ももこ</li>
-          <li>松坂　桃李</li>
-          <li>松坂　桃李</li>
-        </ul>
-      </MembersListStyle>
-    </>
-  )
-}

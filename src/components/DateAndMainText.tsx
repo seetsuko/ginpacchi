@@ -8,6 +8,19 @@ type Props = {
   mainText: string
 }
 
+export const DateAndMainText = ({ date, mainText }: Props) => {
+  return (
+    <DateAndTextStyle>
+      <div>
+        <p suppressHydrationWarning={true}>{date.toString()}</p>
+      </div>
+      <div>
+        <h1>{mainText}</h1>
+      </div>
+    </DateAndTextStyle>
+  )
+}
+
 const DateAndTextStyle = styled.div`
   text-align: center;
   width: 100vw;
@@ -22,16 +35,3 @@ const DateAndTextStyle = styled.div`
     font-size: 30px;
   }
 `
-
-export const DateAndMainText = ({ date, mainText }: Props) => {
-  return (
-    <DateAndTextStyle>
-      <div>
-        <p suppressHydrationWarning={true}>{date.toString()}</p>
-      </div>
-      <div>
-        <h1>{mainText}</h1>
-      </div>
-    </DateAndTextStyle>
-  )
-}
