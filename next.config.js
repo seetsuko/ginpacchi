@@ -6,7 +6,7 @@ const nextConfig = {
   compiler: {
     styledComponents: {
       displayName: false,
-      },
+    },
   },
 }
 

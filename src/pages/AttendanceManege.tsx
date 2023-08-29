@@ -7,9 +7,7 @@ const today = dayjs()
 const staffName = 'tatata'
 
 const AttendanceManege = () => {
-  return (
-      <DateAndMainText date={today} mainText={staffName} />
-  )
+  return <DateAndMainText date={today} mainText={staffName} />
 }
 
 export default AttendanceManege

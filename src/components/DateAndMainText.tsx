@@ -1,7 +1,7 @@
 'use client'
 
 import { Dayjs } from 'dayjs'
-import  styled  from 'styled-components'
+import styled from 'styled-components'
 
 type Props = {
   date: Dayjs
