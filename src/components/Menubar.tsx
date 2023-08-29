@@ -1,22 +1,46 @@
 'use client'
 
 import Link from 'next/link'
+import { useState } from 'react'
 import { slide as Menu } from 'react-burger-menu'
 
 export const Menubar = () => {
 
+  const [ isOpen, setIsOpen ] = useState(false)
+
+  const handleIsOpen = () => {
+    setIsOpen(!isOpen)
+  }
+
   return (
-    <Menu styles={menuStyle}>
-      <Link href='/' className='menu-item'>
+    <Menu
+      styles={menuStyle}
+      isOpen={isOpen}
+      onOpen={handleIsOpen}
+      onClose={handleIsOpen}
+    >
+      <Link
+        href='/'
+        onClick={handleIsOpen}
+      >
         トップ
       </Link>
-      <Link href='/StaffManege' className='menu-item'>
+      <Link
+        href='/StaffManege'
+        onClick={handleIsOpen}
+      >
         スタッフ管理
       </Link>
-      <Link href='/' className='menu-item'>
+      <Link
+        href='/'
+        onClick={handleIsOpen}
+        >
         過去の人件費
       </Link>
-      <Link href='/Contact' className='menu-item'>
+      <Link
+        href='/Contact'
+        onClick={handleIsOpen}
+      >
         お問い合わせ
       </Link>
     </Menu>
