@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { styled } from 'styled-components'
+import  styled  from 'styled-components'
 import { MembersAndSearch } from '@/components/MembersAndSearch'
 import { PageTitle } from '@/components/PageTitle'
 

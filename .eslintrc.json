@@ -6,6 +6,7 @@
     "prettier"
   ],
   "rules": {
+    "import/no-named-as-default":"off",
     "import/order": [
       "error",
       {

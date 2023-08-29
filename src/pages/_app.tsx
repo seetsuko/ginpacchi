@@ -1,5 +1,6 @@
 'use client'
 
+// import "../styles/style.css"
 import type { AppProps } from 'next/app'
 import { createGlobalStyle } from 'styled-components'
 import { Header } from '../components/Header'
