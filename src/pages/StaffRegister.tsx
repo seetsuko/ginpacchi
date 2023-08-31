@@ -1,6 +1,7 @@
 'use client'
 
 import { PageTitle } from '@/components/PageTitle'
+import { StyledButton } from '@/stories/StyledButton'
 
 const StaffRegister = () => {
   return (

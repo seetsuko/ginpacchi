@@ -5,42 +5,24 @@ import { useState } from 'react'
 import { slide as Menu } from 'react-burger-menu'
 
 export const Menubar = () => {
-
-  const [ isOpen, setIsOpen ] = useState(false)
+  const [isOpen, setIsOpen] = useState(false)
 
   const handleIsOpen = () => {
     setIsOpen(!isOpen)
   }
 
   return (
-    <Menu
-      styles={menuStyle}
-      isOpen={isOpen}
-      onOpen={handleIsOpen}
-      onClose={handleIsOpen}
-    >
-      <Link
-        href='/'
-        onClick={handleIsOpen}
-      >
+    <Menu styles={menuStyle} isOpen={isOpen} onOpen={handleIsOpen} onClose={handleIsOpen}>
+      <Link href='/' onClick={handleIsOpen}>
         トップ
       </Link>
-      <Link
-        href='/StaffManege'
-        onClick={handleIsOpen}
-      >
+      <Link href='/StaffManege' onClick={handleIsOpen}>
         スタッフ管理
       </Link>
-      <Link
-        href='/'
-        onClick={handleIsOpen}
-        >
+      <Link href='/' onClick={handleIsOpen}>
         過去の人件費
       </Link>
-      <Link
-        href='/Contact'
-        onClick={handleIsOpen}
-      >
+      <Link href='/Contact' onClick={handleIsOpen}>
         お問い合わせ
       </Link>
     </Menu>
