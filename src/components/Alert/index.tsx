@@ -2,7 +2,6 @@ import {
   FaCheckCircle,
   FaExclamationTriangle,
   FaRegCheckCircle,
-  FaRegTimesCircle,
 } from 'react-icons/fa'
 import { AlertVariant } from './Alert.constant'
 import { AlertContainer, IconTextWrapper, IconWrapper, TextWrapper } from './Alert.style'

@@ -39,16 +39,3 @@ export const ErrorAlert: story = {
     variant: 'error',
   },
 }
-
-// export default {
-//   title: "Alert",
-//   component: Alert
-// }
-
-// const Template = (args) => <Alert {...args}/>
-
-// export const SuccessAlert = Template.bind({})
-
-// SuccessAlert.args = [
-//   variant: "success",
-// ]
