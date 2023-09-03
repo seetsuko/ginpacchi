@@ -7,11 +7,11 @@ const meta: Meta<typeof Alert> = {
   argTypes: {
     variant: {
       control: { type: 'radio' },
-      options: ['success', 'warning', 'error'],
+      options: [ 'success', 'warning', 'error' ],
     },
     noBorder: {
       control: { type: 'boolean' },
-      options: [true, false],
+      options: [ true, false ],
     },
     message: {
       control: { type: 'text' },
