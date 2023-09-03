@@ -1,13 +1,18 @@
 'use client'
 
 import styled from 'styled-components'
+import Button from './Button'
 
 export const MembersAndSearch = () => {
   return (
     <>
       <SearchStyle>
         <input type='text' placeholder='Search' />
-        <button>さがす</button>
+        <Button
+          label="さがす"
+          variant="search"
+          large="true"
+        />
       </SearchStyle>
       <MembersListStyle>
         <ul>

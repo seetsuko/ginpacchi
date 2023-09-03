@@ -1,8 +1,9 @@
+
 import { ButtonWrapper } from "./Button.style"
 
 type ButtonProps = {
-  variant: string
-  large: boolean
+  variant: "search"|"register"|"delete"
+  large: any
   label: string | null 
 }
 const Button = ({

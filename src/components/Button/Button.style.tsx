@@ -1,11 +1,15 @@
+import isPropValid from '@emotion/is-prop-valid'
 import styled, { css } from "styled-components";
 
 type ButtonProps = {
-  variant: string
+  variant: "search"|"register"|"delete"
   large: boolean
 }
 
-export const ButtonWrapper = styled.button<ButtonProps>`
+export const ButtonWrapper = styled.button.withConfig({
+  shouldForwardProp: (prop) =>
+    isPropValid(prop) && !["variant", "large"].includes(prop),
+})<ButtonProps>`
   color: #fff;
   display: inline-block;
   height: 70px;
