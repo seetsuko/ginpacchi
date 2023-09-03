@@ -3,7 +3,7 @@ import { ButtonWrapper } from "./Button.style"
 
 type ButtonProps = {
   variant: "search"|"register"|"delete"
-  large: any
+  large: boolean
   label: string | null 
 }
 const Button = ({
@@ -13,6 +13,7 @@ const Button = ({
     <ButtonWrapper 
       variant={variant}
       large={large}
+      {...restProps}
     >
       {label}
     </ButtonWrapper>

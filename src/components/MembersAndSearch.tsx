@@ -8,11 +8,7 @@ export const MembersAndSearch = () => {
     <>
       <SearchStyle>
         <input type='text' placeholder='Search' />
-        <Button
-          label="さがす"
-          variant="search"
-          large="true"
-        />
+        <Button variant='search' label="さがす" large={true}/>
       </SearchStyle>
       <MembersListStyle>
         <ul>
@@ -37,15 +33,6 @@ const SearchStyle = styled.div`
     border-radius: 10px;
     border: 1px solid #cccccc;
     font-size: 30px;
-  }
-  button {
-    width: 160px;
-    height: 80px;
-    font-size: 30px;
-    color: #ffffff;
-    background-color: #4597f5;
-    border: 1px solid #979797;
-    border-radius: 4px;
   }
 `
 
