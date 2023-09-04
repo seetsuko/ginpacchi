@@ -2,12 +2,13 @@
 
 import styled from 'styled-components'
 import Button from './Button'
+import Input from './Input'
 
 export const MembersAndSearch = () => {
   return (
     <>
       <SearchStyle>
-        <input type='text' placeholder='Search' />
+        <Input label='serch' placeholder='Search' variant='searchInput' />
         <Button variant='search' label='さがす' large={true} />
       </SearchStyle>
       <MembersListStyle>
@@ -23,17 +24,11 @@ export const MembersAndSearch = () => {
 }
 
 const SearchStyle = styled.div`
-  text-align: center;
-  margin-top: 50px;
-  input {
-    width: 300px;
-    margin-right: 50px;
-    padding: 10px;
-    height: 80px;
-    border-radius: 10px;
-    border: 1px solid #cccccc;
-    font-size: 30px;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 500px;
+  margin: 30px auto;
 `
 
 const MembersListStyle = styled.div`

@@ -1,3 +1,4 @@
+import isPropValid from '@emotion/is-prop-valid'
 import styled, { css } from 'styled-components'
 
 type InputProps = {
@@ -6,19 +7,14 @@ type InputProps = {
   label: string | null
 }
 
-export const InputContainer = styled.div<InputProps>`
+export const InputContainer = styled.div.withConfig({
+  shouldForwardProp: (prop) => isPropValid(prop) && !['variant', 'large'].includes(prop),
+})<InputProps>`
   display: flex;
   justify-content: space-between;
   padding: 0 10px;
   font-size: 20px;
-  width: 75vw;
-  div {
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    top: 30px;
-    left: 48px;
-  }
+  width: ${(props) => (props.variant !== 'searchInput' ? '75vw' : '40vw')};
   input {
     ${(props) => {
       if (props.variant === 'textInput') {
@@ -33,12 +29,12 @@ export const InputContainer = styled.div<InputProps>`
       }
       if (props.variant === 'searchInput') {
         return css`
-          width: 250px;
+          width: 300px;
           height: 70px;
           margin: auto 0;
           border: 1px solid #cccccc;
           font-size: 20px;
-          padding-left: 65px;
+          padding-left: 15px;
           border-radius: 10px;
         `
       }

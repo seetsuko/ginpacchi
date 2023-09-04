@@ -16,15 +16,7 @@ const Input = ({
 }: InputProps) => {
   return (
     <InputContainer variant={variant} placeholder={placeholder} label={label} {...restProps}>
-      {variant !== 'searchInput' ? (
-        <p>{label}：</p>
-      ) : (
-        <IconContext.Provider value={{ color: '#ccc', size: '40px' }}>
-          <div>
-            <AiOutlineSearch />
-          </div>
-        </IconContext.Provider>
-      )}
+      {variant !== 'searchInput' && <p>{label}：</p>}
       {variant === 'textInput' || variant === 'searchInput' ? (
         <input type='text' placeholder={placeholder} />
       ) : (
