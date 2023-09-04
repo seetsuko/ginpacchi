@@ -1,17 +1,16 @@
-
-import { CacheProvider } from '@emotion/react';
-import createEmotionServer from '@emotion/server/create-instance';
-import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
-import { ServerStyleSheet } from 'styled-components';
-import createEmotionCache from '../createEmotionCache';
+import { CacheProvider } from '@emotion/react'
+import createEmotionServer from '@emotion/server/create-instance'
+import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document'
+import { ServerStyleSheet } from 'styled-components'
+import createEmotionCache from '../createEmotionCache'
 
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
-    const sheet = new ServerStyleSheet();
-    const originalRenderPage = ctx.renderPage;
+    const sheet = new ServerStyleSheet()
+    const originalRenderPage = ctx.renderPage
 
-    const cache = createEmotionCache({key:"my-app-key"});
-    const { extractCriticalToChunks } = createEmotionServer(cache);
+    const cache = createEmotionCache({ key: 'my-app-key' })
+    const { extractCriticalToChunks } = createEmotionServer(cache)
 
     try {
       ctx.renderPage = () =>
@@ -20,19 +19,19 @@ class MyDocument extends Document {
             sheet.collectStyles(
               <CacheProvider value={cache}>
                 <App {...props} />
-              </CacheProvider>
+              </CacheProvider>,
             ),
-        });
+        })
 
-      const initialProps = await Document.getInitialProps(ctx);
-      const emotionStyles = extractCriticalToChunks(initialProps.html);
+      const initialProps = await Document.getInitialProps(ctx)
+      const emotionStyles = extractCriticalToChunks(initialProps.html)
       const emotionStyleTags = emotionStyles.styles.map((style) => (
         <style
           key={style.key}
           data-emotion={`${style.key} ${style.ids.join(' ')}`}
           dangerouslySetInnerHTML={{ __html: style.css }}
         />
-      ));
+      ))
 
       return {
         ...initialProps,
@@ -43,9 +42,9 @@ class MyDocument extends Document {
             {emotionStyleTags}
           </>
         ),
-      };
+      }
     } finally {
-      sheet.seal();
+      sheet.seal()
     }
   }
 
@@ -58,8 +57,8 @@ class MyDocument extends Document {
           <NextScript />
         </body>
       </Html>
-    );
+    )
   }
 }
 
-export default MyDocument;
+export default MyDocument

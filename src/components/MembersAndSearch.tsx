@@ -8,7 +8,7 @@ export const MembersAndSearch = () => {
     <>
       <SearchStyle>
         <input type='text' placeholder='Search' />
-        <Button variant='search' label="さがす" large={true}/>
+        <Button variant='search' label='さがす' large={true} />
       </SearchStyle>
       <MembersListStyle>
         <ul>

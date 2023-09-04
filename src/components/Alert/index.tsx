@@ -1,8 +1,4 @@
-import {
-  FaCheckCircle,
-  FaExclamationTriangle,
-  FaRegCheckCircle,
-} from 'react-icons/fa'
+import { FaCheckCircle, FaExclamationTriangle, FaRegCheckCircle } from 'react-icons/fa'
 import { AlertVariant } from './Alert.constant'
 import { AlertContainer, IconTextWrapper, IconWrapper, TextWrapper } from './Alert.style'
 

@@ -1,26 +1,26 @@
-import { Meta, StoryObj } from "@storybook/react";
-import Button from ".";
+import { Meta, StoryObj } from '@storybook/react'
+import Button from '.'
 
 const meta: Meta<typeof Button> = {
   component: Button,
-  title: "Button",
+  title: 'Button',
   argTypes: {
     variant: {
-      control: { type: "radio" },
-      options: [ "search", "register", "delete" ]
+      control: { type: 'radio' },
+      options: ['search', 'register', 'delete'],
     },
     large: {
-      control: { type: "boolean" },
-      options: [ true, false ],
+      control: { type: 'boolean' },
+      options: [true, false],
     },
     label: {
-      control: {type: "text"}
-    }
+      control: { type: 'text' },
+    },
   },
   parameters: {
     layout: 'centered',
   },
-  tags: ["autodocs"]
+  tags: ['autodocs'],
 }
 
 export default meta
@@ -29,16 +29,16 @@ type story = StoryObj<typeof meta>
 
 export const SearchButton: story = {
   args: {
-    variant: "search",
-  }
+    variant: 'search',
+  },
 }
 export const RegisterButton: story = {
   args: {
-    variant: "register"
-  }
+    variant: 'register',
+  },
 }
 export const DeleteButton: story = {
   args: {
-    variant: "delete"
-  }
+    variant: 'delete',
+  },
 }
