@@ -1,27 +1,29 @@
-import styled, { css } from "styled-components";
+import isPropValid from '@emotion/is-prop-valid'
+import styled, { css } from 'styled-components'
 
 type TextProps = {
-  variant: "title" | "main"
+  variant: 'title' | 'main' | 'sub'
   date: boolean
   text: string | null
 }
 
-export const ToptextContainer = styled.div<TextProps>`
+export const ToptextContainer = styled.div.withConfig({
+  shouldForwardProp: (prop) => isPropValid(prop) && !['variant', 'date', 'text'].includes(prop),
+})<TextProps>`
   text-align: center;
   width: 100vw;
   margin-top: 50px;
-  border-bottom: ${(props)=>(props.variant === "main" ? "none" : "1px solid #979797")};
+  border-bottom: ${(props) => (props.variant === 'title' ? '1px solid #979797' : 'none')};
   h1 {
     margin: 10px auto;
-    width: 340px;
-    font-size: 68px;
+    font-size: ${(props) => (props.variant === 'main' ? '68px' : '40px')};
   }
-  ${(props)=>{
-    if(props.variant==="title"){
+  ${(props) => {
+    if (props.variant !== 'main') {
       return css`
-      div{
-        margin-top: 50px;
-      }
+        div {
+          margin-top: 50px;
+        }
       `
     }
   }}
@@ -30,7 +32,6 @@ export const ToptextContainer = styled.div<TextProps>`
     margin: 0;
   }
 `
-
 
 export const DateContainer = styled.div`
   p {

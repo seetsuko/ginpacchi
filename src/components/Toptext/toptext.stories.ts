@@ -7,7 +7,7 @@ const meta: Meta<typeof Toptext> = {
   argTypes: {
     variant: {
       control: { type: 'radio' },
-      options: ['main', 'title'],
+      options: ['main', 'sub', 'title'],
     },
     date: {
       control: { type: 'boolean' },

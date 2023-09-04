@@ -1,29 +1,30 @@
 import dayjs from 'dayjs'
-import { ToptextContainer,DateContainer } from './Toptext.style'
+import { ToptextContainer, DateContainer } from './Toptext.style'
 
 type TextProps = {
-  variant: "title" | "main"
+  variant: 'title' | 'main' | 'sub'
   date: boolean
   text: string | null
+  dateText?: string
 }
 
-const Toptext = ({ variant = "main", date=true, text=null, ...restProps }: TextProps) => {
-  
-  const now = dayjs().toString()
-  
+const now = dayjs().format('YYYY/ MM/ DD (ddd)')
+
+const Toptext = ({
+  variant = 'main',
+  date = true,
+  text = null,
+  dateText = now,
+  ...restProps
+}: TextProps) => {
   return (
-    <ToptextContainer variant={variant} date={date} text={text}  {...restProps}>
-      {date &&
-      <DateContainer>
-        <p suppressHydrationWarning={true}>{now}</p>
-      </DateContainer>
-      }
-      <div>
-      {variant === "main"?
-        <h1>{text}</h1>
-        :<p>{text}</p>
-    }
-      </div>
+    <ToptextContainer variant={variant} date={date} text={text} {...restProps}>
+      {date && (
+        <DateContainer>
+          <p suppressHydrationWarning={true}>{dateText}</p>
+        </DateContainer>
+      )}
+      <div>{variant === 'title' ? <p>{text}</p> : <h1>{text}</h1>}</div>
     </ToptextContainer>
   )
 }
