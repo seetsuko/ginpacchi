@@ -1,28 +1,37 @@
-import { InputContainer } from "./Input.style"
+import { IconContext } from 'react-icons'
+import { AiOutlineSearch } from 'react-icons/ai'
+import { InputContainer } from './Input.style'
 
 type InputProps = {
-  variant: "textInput"|"contactTextarea"|"memoTextarea"
+  variant: 'searchInput' | 'textInput' | 'contactTextarea' | 'memoTextarea'
   placeholder: string
   label: string | null
 }
 
 const Input = ({
-  variant="textInput", placeholder="テキストを入力", label=null, ...restProps
-}:InputProps) => {
+  variant = 'textInput',
+  placeholder = 'テキストを入力',
+  label = null,
+  ...restProps
+}: InputProps) => {
   return (
-    <InputContainer
-      variant={variant}
-      placeholder={placeholder}
-      label={label}
-      {...restProps}
-    >
-      <p>{label}：</p>
-      {variant === "textInput" ?
-        <input type="text" placeholder={placeholder}/>
-        : <textarea placeholder={placeholder}/>
-      }
+    <InputContainer variant={variant} placeholder={placeholder} label={label} {...restProps}>
+      {variant !== 'searchInput' ? (
+        <p>{label}：</p>
+      ) : (
+        <IconContext.Provider value={{ color: '#ccc', size: '40px' }}>
+          <div>
+            <AiOutlineSearch />
+          </div>
+        </IconContext.Provider>
+      )}
+      {variant === 'textInput' || variant === 'searchInput' ? (
+        <input type='text' placeholder={placeholder} />
+      ) : (
+        <textarea placeholder={placeholder} />
+      )}
     </InputContainer>
-  );
+  )
 }
 
-export default Input;
+export default Input
