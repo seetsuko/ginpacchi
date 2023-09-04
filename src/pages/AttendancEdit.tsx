@@ -1,13 +1,9 @@
 'use client'
 
-import { PageTitle } from '@/components/PageTitle'
+import Toptext from '@/components/Toptext'
 
 const AttendancEdit = () => {
-  return (
-    <div>
-      <PageTitle pageTitle='勤務時間修正' />
-    </div>
-  )
+  return <Toptext text='勤務時間修正' variant='title' date={false} />
 }
 
 export default AttendancEdit

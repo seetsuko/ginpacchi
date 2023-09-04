@@ -1,13 +1,9 @@
 'use client'
 
-import { PageTitle } from '@/components/PageTitle'
+import Toptext from '@/components/Toptext'
 
 const Contact = () => {
-  return (
-    <div>
-      <PageTitle pageTitle='お問い合わせ' />
-    </div>
-  )
+  return <Toptext date={false} text='お問い合わせ' variant='title' />
 }
 
 export default Contact

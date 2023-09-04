@@ -1,14 +1,9 @@
 'use client'
 
-import { PageTitle } from '@/components/PageTitle'
-import { StyledButton } from '@/stories/StyledButton'
+import Toptext from '@/components/Toptext'
 
 const StaffRegister = () => {
-  return (
-    <div>
-      <PageTitle pageTitle='スタッフ新規登録' />
-    </div>
-  )
+  return <Toptext date={false} text='スタッフ新規登録' variant='title' />
 }
 
 export default StaffRegister

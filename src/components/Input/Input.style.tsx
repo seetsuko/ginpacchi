@@ -8,7 +8,8 @@ type InputProps = {
 }
 
 export const InputContainer = styled.div.withConfig({
-  shouldForwardProp: (prop) => isPropValid(prop) && !['variant', 'large'].includes(prop),
+  shouldForwardProp: (prop) =>
+    isPropValid(prop) && !['variant', 'placeholder', 'label'].includes(prop),
 })<InputProps>`
   display: flex;
   justify-content: space-between;

@@ -1,13 +1,9 @@
 'use client'
 
-import { PageTitle } from '@/components/PageTitle'
+import Toptext from '@/components/Toptext'
 
 const StaffEdit = () => {
-  return (
-    <div>
-      <PageTitle pageTitle='スタッフ情報編集' />
-    </div>
-  )
+  return <Toptext date={false} text='スタッフ情報編集' variant='title' />
 }
 
 export default StaffEdit

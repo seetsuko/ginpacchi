@@ -3,12 +3,12 @@
 import Link from 'next/link'
 import styled from 'styled-components'
 import { MembersAndSearch } from '@/components/MembersAndSearch'
-import { PageTitle } from '@/components/PageTitle'
+import Toptext from '@/components/Toptext'
 
 const StaffManege = () => {
   return (
     <div>
-      <PageTitle pageTitle='スタッフ管理' />
+      <Toptext date={false} text='スタッフ管理' variant='title' />
       <StaffAddLinkStyle>
         <Link href='/'>スタッフを追加</Link>
       </StaffAddLinkStyle>

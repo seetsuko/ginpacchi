@@ -1,13 +1,11 @@
 'use client'
 
-import dayjs from 'dayjs'
-import { DateAndMainText } from '@/components/DateAndMainText'
+import Toptext from '@/components/Toptext'
 
-const today = dayjs()
 const staffName = 'tatata'
 
 const AttendanceManege = () => {
-  return <DateAndMainText date={today} mainText={staffName} />
+  return <Toptext date text={staffName} variant='sub' />
 }
 
 export default AttendanceManege
