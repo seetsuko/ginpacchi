@@ -9,7 +9,7 @@ class MyDocument extends Document {
     const sheet = new ServerStyleSheet()
     const originalRenderPage = ctx.renderPage
 
-    const cache = createEmotionCache({ key: 'my-app-key' })
+    const cache = createEmotionCache()
     const { extractCriticalToChunks } = createEmotionServer(cache)
 
     try {

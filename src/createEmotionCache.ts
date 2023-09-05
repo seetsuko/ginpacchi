@@ -4,4 +4,4 @@ const createEmotionCache = () => {
   return createCache({ key: 'css' })
 }
 
-export default createCache
+export default createEmotionCache
