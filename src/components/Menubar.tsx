@@ -32,8 +32,8 @@ export const Menubar = () => {
 const menuStyle = {
   bmBurgerButton: {
     position: 'fixed',
-    width: '36px',
-    height: '30px',
+    width: '4vw',
+    height: '3vh',
     left: '36px',
     top: '36px',
   },

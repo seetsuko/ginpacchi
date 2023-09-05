@@ -15,14 +15,14 @@ export const ToptextContainer = styled.div.withConfig({
   margin-top: 5vh;
   border-bottom: ${(props) => (props.variant === 'title' ? '1px solid #979797' : 'none')};
   h1 {
-    margin: 10px auto;
-    font-size: ${(props) => (props.variant === 'main' ? '68px' : '40px')};
+    margin: 1vh auto;
+    font-size: ${(props) => (props.variant === 'main' ? '4rem' : '2.5rem')};
   }
   ${(props) => {
     if (props.variant !== 'main') {
       return css`
         div {
-          margin-top: 50px;
+          margin-top: 5vh;
         }
       `
     }
@@ -36,6 +36,6 @@ export const ToptextContainer = styled.div.withConfig({
 export const DateContainer = styled.div`
   p {
     color: #444;
-    font-size: 30px;
+    font-size: 2rem;
   }
 `

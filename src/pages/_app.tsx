@@ -9,8 +9,8 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <GlobalStyle />
-      <Menubar />
       <Header />
+      <Menubar />
       <Component {...pageProps} />
     </>
   )

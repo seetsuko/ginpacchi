@@ -26,16 +26,16 @@ export const InputContainer = styled.div.withConfig({
           margin: auto 0;
           border: 1px solid #cccccc;
           font-size: 1.4rem;
-          padding-left: 1.5vw;
+          padding-left: 15px;
         `
       }
       if (props.variant === 'searchInput') {
         return css`
-          width: 300px;
-          height: 70px;
+          width: 36vw;
+          height: 7vh;
           margin: auto 0;
           border: 1px solid #cccccc;
-          font-size: 30px;
+          font-size: 2rem;
           padding-left: 15px;
           border-radius: 10px;
         `
@@ -50,7 +50,7 @@ export const InputContainer = styled.div.withConfig({
           margin: auto 0;
           border: 1px solid #cccccc;
           font-size: 1.2rem;
-          padding: 1.2vh 1.5vw;
+          padding: 12px 15px;
           height: 30vh;
         `
       }
@@ -59,7 +59,7 @@ export const InputContainer = styled.div.withConfig({
           margin: auto 0;
           border: 1px solid #cccccc;
           font-size: 1.2rem;
-          padding: 1.2vh 1.5vw;
+          padding: 12px 15px;
           height: 20vh;
         `
       }

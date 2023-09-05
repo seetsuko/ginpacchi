@@ -27,26 +27,28 @@ const SearchStyle = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 500px;
-  margin: 30px auto;
+  width: 65vw;
+  margin: 3vh auto;
 `
 
 const MembersListStyle = styled.div`
-  margin: 50px 10px;
   ul {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
+    padding: 0;
+    width: 95vw;
+    margin: 0 auto;
   }
   li {
     background-color: #f5c87f;
     color: #666666;
     border-radius: 15px;
-    width: 200px;
-    height: 110px;
-    font-size: 27px;
+    width: 25vw;
+    height: 9vh;
+    font-size: 1.7rem;
     text-align: center;
-    line-height: 110px;
-    margin: 20px 20px;
+    line-height: 9vh;
+    margin: 2vh 2.5vw;
   }
 `

@@ -10,7 +10,7 @@ const StaffManege = () => {
     <div>
       <Toptext date={false} text='スタッフ管理' variant='title' />
       <StaffAddLinkStyle>
-        <Link href='/'>スタッフを追加</Link>
+        <Link href='/StaffRegister'>スタッフを追加</Link>
       </StaffAddLinkStyle>
       <MembersAndSearch />
     </div>
