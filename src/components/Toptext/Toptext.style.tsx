@@ -12,7 +12,7 @@ export const ToptextContainer = styled.div.withConfig({
 })<TextProps>`
   text-align: center;
   width: 100vw;
-  margin-top: 50px;
+  margin-top: 5vh;
   border-bottom: ${(props) => (props.variant === 'title' ? '1px solid #979797' : 'none')};
   h1 {
     margin: 10px auto;
@@ -28,8 +28,8 @@ export const ToptextContainer = styled.div.withConfig({
     }
   }}
   p {
-    font-size: 30px;
-    margin: 0;
+    font-size: 1.7rem;
+    margin-bottom: 1vh;
   }
 `
 

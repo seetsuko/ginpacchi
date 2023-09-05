@@ -8,6 +8,6 @@ export const Header = () => {
 
 const HeaderStyle = styled.div`
   background-color: #89bcff;
-  height: 120px;
+  height: 10vh;
   padding: 30px;
 `

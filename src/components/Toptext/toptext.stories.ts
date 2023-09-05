@@ -34,3 +34,8 @@ export const TitleText: story = {
     variant: 'title',
   },
 }
+export const SubText: story = {
+  args: {
+    variant: 'sub',
+  },
+}

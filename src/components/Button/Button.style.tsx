@@ -11,11 +11,11 @@ export const ButtonWrapper = styled.button.withConfig({
 })<ButtonProps>`
   color: #fff;
   display: inline-block;
-  height: 70px;
-  font-size: 35px;
+  height: 6vh;
+  font-size: 1.8rem;
   border: none;
   border-radius: 3px;
-  width: ${(props) => (props.large ? '160px' : '120px')};
+  width: ${(props) => (props.large ? '20vw' : '15vw')};
   ${(props) => {
     if (props.variant === 'search') {
       return css`
