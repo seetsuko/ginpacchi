@@ -1,4 +1,3 @@
-'use client'
 
 import Toptext from '@/components/Toptext'
 

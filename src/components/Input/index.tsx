@@ -1,5 +1,3 @@
-import { IconContext } from 'react-icons'
-import { AiOutlineSearch } from 'react-icons/ai'
 import { InputContainer } from './Input.style'
 
 type InputProps = {

@@ -1,12 +1,9 @@
-'use client'
 
-import dayjs from 'dayjs'
 import Head from 'next/head'
 import { MembersAndSearch } from '@/components/MembersAndSearch'
 import Toptext from '@/components/Toptext'
 
 export default function Home() {
-  const today = dayjs()
   const costTotal = '12345'
 
   return (
@@ -18,7 +15,7 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <main>
-        <Toptext date={true} text='￥　12345' variant='main' />
+        <Toptext date={true} text={`￥　${costTotal}`} variant='main' />
         <MembersAndSearch />
       </main>
     </>

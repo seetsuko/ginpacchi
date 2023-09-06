@@ -1,5 +1,3 @@
-'use client'
-
 import styled from 'styled-components'
 import Button from '@/components/Button'
 import Input from '@/components/Input'
@@ -27,7 +25,7 @@ const Contact = () => {
           <Input label='*本文' placeholder='本文を入力（必須）' variant='contactTextarea' />
         </div>
         <div className='button-container'>
-          <Button label='送信' variant='register' large={false} />
+          <Button label='送信' variant='register' large={false}/>
         </div>
       </TextFormContiner>
     </div>

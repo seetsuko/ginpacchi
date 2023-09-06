@@ -11,7 +11,7 @@ export const ButtonWrapper = styled.button.withConfig({
 })<ButtonProps>`
   color: #fff;
   display: inline-block;
-  height: 6vh;
+  height: 65px;
   font-size: 1.8rem;
   border: none;
   border-radius: 3px;
