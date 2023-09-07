@@ -1,13 +1,20 @@
 import { ButtonWrapper } from './Button.style'
 
 type ButtonProps = {
-  variant: 'search' | 'register' | 'delete'
-  large: boolean
+  variant: 'other' | 'register' | 'delete'
+  size: 'large' | 'medium' | 'small'
   label: string | null
+  onClick?: () => void
 }
-const Button = ({ variant = 'search', large = true, label = null, ...restProps }: ButtonProps) => {
+
+const Button = ({
+  variant = 'other',
+  size = 'medium',
+  label = null,
+  ...restProps
+}: ButtonProps) => {
   return (
-    <ButtonWrapper variant={variant} large={large} {...restProps}>
+    <ButtonWrapper variant={variant} size={size} {...restProps}>
       {label}
     </ButtonWrapper>
   )

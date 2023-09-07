@@ -2,22 +2,35 @@ import isPropValid from '@emotion/is-prop-valid'
 import styled, { css } from 'styled-components'
 
 type ButtonProps = {
-  variant: 'search' | 'register' | 'delete'
-  large: boolean
+  variant: 'other' | 'register' | 'delete'
+  size: 'large' | 'medium' | 'small'
+  onClick?: () => void
 }
 
 export const ButtonWrapper = styled.button.withConfig({
-  shouldForwardProp: (prop) => isPropValid(prop) && !['variant', 'large'].includes(prop),
+  shouldForwardProp: (prop) =>
+    isPropValid(prop) && !['variant', 'size', 'label', 'onClick'].includes(prop),
 })<ButtonProps>`
   color: #fff;
   display: inline-block;
-  height: 65px;
-  font-size: 1.8rem;
+  font-size: 1.3rem;
   border: none;
   border-radius: 3px;
-  width: ${(props) => (props.large ? '20vw' : '15vw')};
+  height: 50px;
+  width: ${(props) => {
+    switch (props.size) {
+      case 'large':
+        return '200px'
+      case 'medium':
+        return '150px'
+      case 'small':
+        return '80px'
+      default:
+        return '200px'
+    }
+  }};
   ${(props) => {
-    if (props.variant === 'search') {
+    if (props.variant === 'other') {
       return css`
         background-color: #4597f5;
       `
