@@ -1,4 +1,3 @@
-
 import Toptext from '@/components/Toptext'
 
 const AttendanceEdit = () => {

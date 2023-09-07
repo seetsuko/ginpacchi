@@ -1,4 +1,3 @@
-
 import styled from 'styled-components'
 import Button from '@/components/Button'
 import Input from '@/components/Input'
@@ -19,13 +18,13 @@ const StaffRegister = () => {
           <Input label='交通費' placeholder='往復交通費を入力　*半角数字' variant='textInput' />
         </div>
         <div>
-          <Input label='連絡先' placeholder='電話番号を入力　*半角数字' variant='textInput' />
+          <Input label='勤務可能日' placeholder='電話番号を入力　*半角数字' variant='textInput' />
         </div>
         <div className='textarea-form'>
           <Input label='メモ' placeholder='memo' variant='memoTextarea' />
         </div>
         <div className='button-container'>
-          <Button label='登録' variant='register' large={false} />
+          <Button label='登録' variant='register' size='medium' />
         </div>
       </TextFormContiner>
     </div>

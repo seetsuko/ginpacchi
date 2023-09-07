@@ -1,4 +1,3 @@
-
 import Head from 'next/head'
 import { MembersAndSearch } from '@/components/MembersAndSearch'
 import Toptext from '@/components/Toptext'

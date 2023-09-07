@@ -1,5 +1,3 @@
-
-
 import styled from 'styled-components'
 import Button from './Button'
 import Input from './Input'
@@ -9,7 +7,7 @@ export const MembersAndSearch = () => {
     <>
       <SearchStyle>
         <Input label='serch' placeholder='Search' variant='searchInput' />
-        <Button variant='search' label='さがす' large={true} />
+        <Button variant='other' label='さがす' size='large' />
       </SearchStyle>
       <MembersListStyle>
         <ul>
