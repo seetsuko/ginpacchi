@@ -1,17 +1,7 @@
 import { graphql } from 'msw'
 
 export const handlers = [
-  // Capture a "Login" mutation
-  graphql.get('https://dekitate.com/book', (_, res, ctx) => {
-      return res(
-        ctx.json({
-              id: 'dfghj',
-              name: "あゔちゃん"
-            })
-      )
-          })
-    ]
-
+  graphql.query('GetUser', (req, res, ctx) => {
     return res(
       ctx.data({
         user: {
@@ -20,7 +10,7 @@ export const handlers = [
           firstName: 'ばらぞの',
           lastName: 'あゔちゃん',
         },
-      })
+      }),
     )
   }),
 ]
