@@ -1,5 +1,6 @@
+
 import type { AppProps } from 'next/app'
-import { createGlobalStyle } from 'styled-components'
+import styled,{ createGlobalStyle } from 'styled-components'
 import { Header } from '../components/Header'
 import { Menubar } from '@/components/Menubar'
 
@@ -9,7 +10,9 @@ export default function App({ Component, pageProps }: AppProps) {
       <GlobalStyle />
       <Header />
       <Menubar />
+      <PageStyle>
       <Component {...pageProps} />
+      </PageStyle>
     </>
   )
 }
@@ -20,6 +23,8 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    background-color: #faf0db;
+
   }
   a {
     color: inherit;
@@ -37,4 +42,9 @@ const GlobalStyle = createGlobalStyle`
       background: black;
     }
   }
+`
+const PageStyle = styled.main`
+  width: 95%;
+  margin: 0 auto;
+  background-color: #fff;
 `
