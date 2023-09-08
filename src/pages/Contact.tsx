@@ -1,7 +1,7 @@
 import styled from 'styled-components'
-import Button from '@/components/Button/Button'
-import Input from '@/components/Input/Input'
-import Toptext from '@/components/Toptext/TopText'
+import Button from '@/components/common/Button/Button'
+import Input from '@/components/common/Input/Input'
+import Toptext from '@/components/common/Toptext/TopText'
 
 const Contact = () => {
   return (
@@ -25,7 +25,7 @@ const Contact = () => {
           <Input label='*本文' placeholder='本文を入力（必須）' variant='contactTextarea' />
         </div>
         <div className='button-container'>
-          <Button label='送信' variant='register' size='medium' />
+          <Button label='送信' color='register' size='medium' />
         </div>
       </TextFormContiner>
     </div>

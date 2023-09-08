@@ -1,4 +1,4 @@
-import Toptext from '@/components/Toptext/TopText'
+import Toptext from '@/components/common/Toptext/TopText'
 
 const staffName = 'tatata'
 

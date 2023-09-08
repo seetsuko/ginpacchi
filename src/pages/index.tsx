@@ -5,7 +5,7 @@ import { useState } from 'react'
 import styled from 'styled-components'
 import { MembersAndSearch } from '@/components/MembersAndSearch'
 import ShiftTable from '@/components/ShiftTable/ShiftTable '
-import Toptext from '@/components/Toptext/TopText'
+import Toptext from '@/components/common/Toptext/TopText'
 
 type EventData = {
   date: Date
