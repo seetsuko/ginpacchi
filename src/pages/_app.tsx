@@ -1,19 +1,24 @@
-
+import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client'
 import type { AppProps } from 'next/app'
-import styled,{ createGlobalStyle } from 'styled-components'
+import styled, { createGlobalStyle } from 'styled-components'
 import { Header } from '../components/Header'
 import { Menubar } from '@/components/Menubar'
 
+const client = new ApolloClient({
+  uri: '', // モックAPIの場合、URLを指定しない
+  cache: new InMemoryCache(),
+})
+
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <>
+    <ApolloProvider client={client}>
       <GlobalStyle />
       <Header />
       <Menubar />
       <PageStyle>
-      <Component {...pageProps} />
+        <Component {...pageProps} />
       </PageStyle>
-    </>
+    </ApolloProvider>
   )
 }
 
