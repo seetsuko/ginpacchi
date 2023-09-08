@@ -2,21 +2,19 @@ import isPropValid from '@emotion/is-prop-valid'
 import styled, { css } from 'styled-components'
 
 type ButtonProps = {
-  variant: 'other' | 'register' | 'delete'
+  color: 'other' | 'register' | 'delete'
   size: 'large' | 'medium' | 'small'
   onClick?: () => void
 }
 
-export const ButtonWrapper = styled.button.withConfig({
-  shouldForwardProp: (prop) =>
-    isPropValid(prop) && !['variant', 'size', 'label', 'onClick'].includes(prop),
-})<ButtonProps>`
+export const ButtonWrapper = styled.button<ButtonProps>`
+  cursor: pointer;
   color: #fff;
   display: inline-block;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   border: none;
   border-radius: 3px;
-  height: 50px;
+  height: 40px;
   width: ${(props) => {
     switch (props.size) {
       case 'large':
@@ -24,23 +22,23 @@ export const ButtonWrapper = styled.button.withConfig({
       case 'medium':
         return '150px'
       case 'small':
-        return '80px'
+        return '60px'
       default:
         return '200px'
     }
   }};
   ${(props) => {
-    if (props.variant === 'other') {
+    if (props.color === 'other') {
       return css`
         background-color: #4597f5;
       `
     }
-    if (props.variant === 'register') {
+    if (props.color === 'register') {
       return css`
         background-color: #85d000;
       `
     }
-    if (props.variant === 'delete') {
+    if (props.color === 'delete') {
       return css`
         background-color: #e0001a;
       `

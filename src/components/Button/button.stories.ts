@@ -5,7 +5,7 @@ const meta: Meta<typeof Button> = {
   component: Button,
   title: 'Button',
   argTypes: {
-    variant: {
+    color: {
       control: { type: 'radio' },
       options: ['other', 'register', 'delete'],
     },
@@ -21,7 +21,7 @@ const meta: Meta<typeof Button> = {
     layout: 'centered',
   },
   args: {
-    variant: 'other',
+    color: 'other',
     size: 'medium',
   },
   tags: ['autodocs'],
@@ -31,21 +31,21 @@ export default meta
 
 type story = StoryObj<typeof meta>
 
-export const otherButton: story = {
+export const OtherButton: story = {
   args: {
-    variant: 'other',
+    color: 'other',
     size: 'medium',
   },
 }
 export const RegisterButton: story = {
   args: {
-    variant: 'register',
+    color: 'register',
     size: 'medium',
   },
 }
 export const DeleteButton: story = {
   args: {
-    variant: 'delete',
+    color: 'delete',
     size: 'medium',
   },
 }

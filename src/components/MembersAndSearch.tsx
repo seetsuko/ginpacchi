@@ -7,7 +7,7 @@ export const MembersAndSearch = () => {
     <>
       <SearchStyle>
         <Input label='serch' placeholder='Search' variant='searchInput' />
-        <Button variant='other' label='さがす' size='large' />
+        <Button color='other' label='さがす' size='large' />
       </SearchStyle>
       <MembersListStyle>
         <ul>
@@ -35,14 +35,13 @@ const MembersListStyle = styled.div`
     display: flex;
     flex-wrap: wrap;
     padding: 0;
-    width: 95vw;
     margin: 0 auto;
   }
   li {
     background-color: #f5c87f;
     color: #666666;
     border-radius: 15px;
-    width: 25vw;
+    width: 200px;
     height: 9vh;
     font-size: 1.7rem;
     text-align: center;
