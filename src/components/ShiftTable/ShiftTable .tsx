@@ -1,4 +1,4 @@
-import dayjs from 'dayjs'
+import  CalendarDay from './CalendarDay'
 import { TableWrapper } from './ShiftTable.style'
 
 type EventData = {
@@ -6,7 +6,7 @@ type EventData = {
   description: string
 }
 
-export const ShitTable = ({ selectedDate, daysArray, events }: any) => {
+const ShiftTable = ({ selectedDate, daysArray, events }: any) => {
   return (
     <TableWrapper>
       <table>
@@ -37,17 +37,5 @@ export const ShitTable = ({ selectedDate, daysArray, events }: any) => {
   )
 }
 
-export const CalendarDay = ({ date, events }: { date: Date; events: EventData[] }) => {
-  const currentDate = dayjs(date)
 
-  return (
-    <td>
-      {/* 日付ごとのシフトを表示 */}
-      {events
-        .filter((event) => dayjs(event.date).isSame(currentDate, 'day'))
-        .map((event) => (
-          <div key={event.description}>{event.description}</div>
-        ))}
-    </td>
-  )
-}
+export default ShiftTable

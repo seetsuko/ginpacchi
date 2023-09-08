@@ -1,7 +1,9 @@
 import dayjs from 'dayjs'
 import { useState } from 'react'
+import styled from 'styled-components'
 import Button from '@/components/Button'
-import { ShitTable } from '@/components/ShiftTable'
+import  ShiftTable  from '@/components/ShiftTable/ShiftTable '
+import Toptext from '@/components/Toptext'
 
 type EventData = {
   date: Date
@@ -30,16 +32,25 @@ function CalendarSchedule() {
   const daysArray = [...Array(daysInMonth).keys()].map((day) => day + 1)
 
   return (
-    <div>
-      <h1>シフト表</h1>
+    <ShiftPageContainer>
+      <Toptext date={false} text='シフト表' variant='title' />
       <div>
-        <Button label='翌月' size='small' variant='other' onClick={goToPreviousMonth} />
-        <span>{selectedDate.format('YYYY年M月')}</span>
-        <button onClick={goToNextMonth}>次月</button>
+        <Button label='前月' size='small' color='other' onClick={goToPreviousMonth} />
+        <h3>{selectedDate.format('YYYY年M月')}</h3>
+        <Button label='翌月' size='small' color='other' onClick={goToNextMonth} />
       </div>
-      <ShitTable selectedDate={selectedDate} daysArray={daysArray} events={events} />
-    </div>
+      <ShiftTable selectedDate={selectedDate} daysArray={daysArray} events={events} />
+    </ShiftPageContainer>
   )
 }
 
 export default CalendarSchedule
+
+const ShiftPageContainer = styled.div`
+  div {
+    display: flex;
+  }
+  h3 {
+    margin: 0 20px;
+  }
+`
