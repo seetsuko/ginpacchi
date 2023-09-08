@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import styled from 'styled-components'
 import { MembersAndSearch } from '@/components/MembersAndSearch'
-import Toptext from '@/components/Toptext'
+import Toptext from '@/components/Toptext/TopText'
 
 const StaffManege = () => {
   return (

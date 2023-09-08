@@ -1,9 +1,9 @@
 import dayjs from 'dayjs'
 import { useState } from 'react'
 import styled from 'styled-components'
-import Button from '@/components/Button'
+import Button from '@/components/Button/Button'
 import  ShiftTable  from '@/components/ShiftTable/ShiftTable '
-import Toptext from '@/components/Toptext'
+import Toptext from '@/components/Toptext/TopText'
 
 type EventData = {
   date: Date

@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react'
-import Toptext from '.'
+import Toptext from './TopText'
 
 const meta: Meta<typeof Toptext> = {
   component: Toptext,

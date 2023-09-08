@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import Button from './Button'
-import Input from './Input'
+import Button from './Button/Button'
+import Input from './Input/Input'
 
 export const MembersAndSearch = () => {
   return (

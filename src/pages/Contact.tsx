@@ -1,7 +1,7 @@
 import styled from 'styled-components'
-import Button from '@/components/Button'
-import Input from '@/components/Input'
-import Toptext from '@/components/Toptext'
+import Button from '@/components/Button/Button'
+import Input from '@/components/Input/Input'
+import Toptext from '@/components/Toptext/TopText'
 
 const Contact = () => {
   return (
