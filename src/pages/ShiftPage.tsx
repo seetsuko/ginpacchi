@@ -1,7 +1,7 @@
 import dayjs from 'dayjs'
 import { useState } from 'react'
 import styled from 'styled-components'
-import  ShiftTable  from '@/components/ShiftTable/ShiftTable '
+import ShiftTable from '@/components/ShiftTable/ShiftTable '
 import Button from '@/components/common/Button/Button'
 import Toptext from '@/components/common/Toptext/TopText'
 

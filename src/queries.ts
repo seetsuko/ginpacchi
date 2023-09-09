@@ -1,0 +1,25 @@
+import { gql } from "@apollo/client";
+
+export const GET_USER = gql`
+  query GetUser {
+    user {
+      id
+      staffName
+    }
+  }
+`
+
+export const EDIT_USER = gql`
+  mutation EditUser($staffName: String!) {
+    editUser(staffName: $staffName) {
+      id
+      staffName
+    }
+  }
+`
+
+export const DELETE_USER = gql`
+  mutation DeleteUser($id: String!) {
+    deleteUser(id: $id)
+  }
+`
