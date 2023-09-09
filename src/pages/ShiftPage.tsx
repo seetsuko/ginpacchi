@@ -1,4 +1,4 @@
-import dayjs from 'dayjs'
+import dayjs, { Dayjs } from 'dayjs'
 import { useState } from 'react'
 import styled from 'styled-components'
 import ShiftTable from '@/components/ShiftTable/ShiftTable '
@@ -6,7 +6,7 @@ import Button from '@/components/common/Button/Button'
 import Toptext from '@/components/common/Toptext/TopText'
 
 type EventData = {
-  date: Date
+  date: Dayjs
   description: string
 }
 
@@ -15,7 +15,7 @@ function CalendarSchedule() {
   const [events, setEvents] = useState<EventData[]>([
     // シフトデータの例
     {
-      date: new Date(),
+      date: dayjs(),
       description: '12〜15',
     },
   ])

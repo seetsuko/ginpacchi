@@ -1,15 +1,22 @@
-import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client'
-import type { AppProps } from 'next/app'
-import styled, { createGlobalStyle } from 'styled-components'
-import { Header } from '../components/Header'
-import { Menubar } from '@/components/Menubar'
+// pages/_app.js
+
+import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client';
+import type { AppProps } from 'next/app';
+import styled, { createGlobalStyle } from 'styled-components';
+import { Header } from '../components/Header';
+import { Menubar } from '@/components/Menubar';
+import { server } from '@/mocks/server';
+
+if (process.env.NODE_ENV === 'development') {
+  server.listen();
+}
 
 const client = new ApolloClient({
-  uri: '', // モックAPIの場合、URLを指定しない
+  uri: '/api/graphql', // モックAPIのエンドポイントを指定
   cache: new InMemoryCache(),
-})
+});
 
-export default function App({ Component, pageProps }: AppProps) {
+function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ApolloProvider client={client}>
       <GlobalStyle />
@@ -19,7 +26,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <Component {...pageProps} />
       </PageStyle>
     </ApolloProvider>
-  )
+  );
 }
 
 const GlobalStyle = createGlobalStyle`
@@ -47,9 +54,12 @@ const GlobalStyle = createGlobalStyle`
       background: black;
     }
   }
-`
+`;
+
 const PageStyle = styled.main`
   width: 95%;
   margin: 0 auto;
   background-color: #fff;
-`
+`;
+
+export default MyApp;
