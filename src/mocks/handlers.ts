@@ -1,21 +1,5 @@
 import { graphql } from 'msw';
-
-// モックデータ
-const users = [
-  {
-    id: 'haddfaefa',
-    staffName: 'うちは サスケ',
-  },
-  {
-    id: 'lkjaoijap',
-    staffName: 'うずまき ナルト',
-  },
-  {
-    id: ',bpsrtlkh',
-    staffName: '春野 サクラ',
-  },
-  
-];
+import { users } from './mockData'
 
 // GraphQLのクエリをモック
 const handlers = [
@@ -55,10 +39,15 @@ const handlers = [
 
   // ユーザーを作成するミューテーション
   graphql.mutation('CreateUser', (req, res, ctx) => {
-    const { staffName } = req.variables;
+    const { staffName, shift } = req.variables;
     const newUser = {
       id: String(users.length + 1), // ユーザーIDを自動生成
       staffName,
+      shift: {
+        date: shift.date,
+        startTime: shift.startTime,
+        endTime: shift.endTime
+      },
     };
     users.push(newUser);
 
@@ -71,11 +60,13 @@ const handlers = [
 
   // ユーザーを更新するミューテーション
   graphql.mutation('UpdateUser', (req, res, ctx) => {
-    const { id, name } = req.variables;
+    const { id, name, shift } = req.variables;
     const userIndex = users.findIndex((u) => u.id === id);
 
     if (userIndex !== -1) {
       users[userIndex].staffName = name;
+      users[userIndex].shift.startTime = shift.startTime;
+      users[userIndex].shift.endTime = shift.endTime;
 
       return res(
         ctx.data({
