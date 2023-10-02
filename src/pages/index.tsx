@@ -33,16 +33,13 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <MainContainer>
-        <Toptext date={true} text={`￥　${costTotal}`} variant='main' />
+        <Toptext date={true} text={'今月のシフト'} variant='main' />
         <ShiftTable selectedDate={date} daysArray={daysArray} events={events} />
-        <MembersAndSearch />
       </MainContainer>
     </>
   )
 }
 
 const MainContainer = styled.main`
-  /* width: 95%;
-  margin: 0 auto;
-  background-color: #fef5eb; */
+  text-align: center;
 `

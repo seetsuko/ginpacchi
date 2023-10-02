@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { useState } from 'react'
 import { slide as Menu } from 'react-burger-menu'
+import styled from 'styled-components'
 
 export const Menubar = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -10,45 +11,38 @@ export const Menubar = () => {
   }
 
   return (
+    <MenubarWrapper>
     <Menu styles={menuStyle} isOpen={isOpen} onOpen={handleIsOpen} onClose={handleIsOpen}>
-      <Link href='/' onClick={handleIsOpen}>
+      <Link href='/' onClick={handleIsOpen} className='item'>
         トップ
       </Link>
-      <Link href='/StaffManege' onClick={handleIsOpen}>
+      <Link href='/StaffManege' onClick={handleIsOpen} className='item'>
+        シフト管理
+      </Link>
+      <Link href='/' onClick={handleIsOpen} className='item'>
         スタッフ管理
       </Link>
-      <Link href='/' onClick={handleIsOpen}>
-        過去の人件費
-      </Link>
-      <Link href='/Contact' onClick={handleIsOpen}>
+      <Link href='/Contact' onClick={handleIsOpen} className='item'>
         お問い合わせ
       </Link>
     </Menu>
+    </MenubarWrapper>
   )
 }
 
 const menuStyle = {
   bmBurgerButton: {
     position: 'fixed',
-    width: '4vw',
-    height: '3vh',
+    width: '30px',
+    height: '25px',
     left: '36px',
     top: '36px',
   },
   bmBurgerBars: {
-    background: '#373a47',
+    background: '#ffffff',
   },
   bmBurgerBarsHover: {
-    background: '#005b99',
-  },
-  bmCrossButton: {
-    top: '20px !important',
-    right: '30px !important',
-  },
-  bmCross: {
-    width: '5px !important',
-    height: '30px !important',
-    background: '#373a47',
+    background: '#c5c5c5',
   },
   bmMenuWrap: {
     position: 'fixed',
@@ -56,11 +50,10 @@ const menuStyle = {
   },
   bmMenu: {
     background: '#4597f5',
-    fontSize: '1.8em',
-    paddingTop: '2em',
+    fontSize: '1.2em',
   },
   bmItemList: {
-    color: '#fff',
+    color: '#ffffff',
   },
   bmItem: {
     display: 'inline-block',
@@ -74,3 +67,9 @@ const menuStyle = {
     background: 'rgba(0, 0, 0, 0.3)',
   },
 }
+
+const MenubarWrapper = styled.div`
+  .item:hover {
+    background-color: #006aff86;
+  }
+`
