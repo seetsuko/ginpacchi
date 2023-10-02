@@ -8,6 +8,6 @@ const HeaderStyle = styled.header`
   position: sticky;
   top: 0;
   width: 100vw;
-  background-color: #89bcff;
+  background-color: #0572ff;
   height: 10vh;
 `
