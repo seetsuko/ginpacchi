@@ -10,16 +10,15 @@ type TextProps = {
 export const ToptextContainer = styled.div.withConfig({
   shouldForwardProp: (prop) => isPropValid(prop) && !['variant', 'date', 'text'].includes(prop),
 })<TextProps>`
-  margin-top: 5vh;
   h1 {
-    margin: 1vh auto;
-    font-size: ${(props) => (props.variant === 'main' ? '2rem' : '1.5rem')};
+    margin: 0 auto;
+    font-size: ${(props) => (props.variant === 'main' ? '1.2rem' : '1.2rem')};
   }
   ${(props) => {
     if (props.variant !== 'main') {
       return css`
         div {
-          margin-top: 5vh;
+          margin-top: 12px;
         }
       `
     }
@@ -32,6 +31,6 @@ export const ToptextContainer = styled.div.withConfig({
 export const DateContainer = styled.div`
   p {
     color: #444;
-    font-size: 1.6rem;
+    font-size: 1.3rem;
   }
 `

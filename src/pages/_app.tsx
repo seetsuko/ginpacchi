@@ -23,7 +23,9 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Header />
       <Menubar />
       <PageStyle>
-        <Component {...pageProps} />
+        <div>
+          <Component {...pageProps} />
+        </div>
       </PageStyle>
     </ApolloProvider>
   );
@@ -57,9 +59,11 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const PageStyle = styled.main`
-  width: 95%;
-  margin: 0 auto;
-  background-color: #fff;
+  padding: 15px;
+  div{
+    padding: 10px;
+    background-color: #fff;
+  }
 `;
 
 export default MyApp;
